@@ -1,0 +1,7 @@
+{
+    "username": "postgres",
+    "password": "admin",
+    "database": "play",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+}
