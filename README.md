@@ -4,5 +4,6 @@ A simple example project with a working polymorphic association using Sequelize 
 Setup 
 ```
 $ npm install
+$ sequelize db:migrate
 $ nodemon
 ```
