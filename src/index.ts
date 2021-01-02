@@ -22,11 +22,11 @@ db.sequelize
 
             const { Image, Video, Comment} = db;
 
-            // const newImage = await Image.create({
-            //     title: "firstImage",
-            //     url: "www.firstimageurl.com"
-            //   })
-            //   console.log('newUser', newImage);
+            const newImage = await Image.create({
+                title: "firstImage",
+                url: "www.firstimageurl.com"
+              })
+              console.log('newUser', newImage);
             //   const newComment = await Comment.create({
             //     title: "firstImage",
             //     url: "www.firstimageurl.com"
@@ -37,18 +37,18 @@ db.sequelize
             //     text: "videoText"
             // })
             // Find imge by id
-            // const image = await Image.findByPk(1)
-            // console.log("Image", image);
-            // console.log("Image", await image.createComment({title:'Believe in magic'}));
+            const image = await Image.findByPk(1)
+            console.log("Image", image);
+            console.log("Image", await image.createComment({title:'Believe in magic'}));
             // console.log("Comments from image", await image.getComments());
 
             // const video = await Video.findByPk(1)
             // console.log("Video", video);
 
-            const comment1 = await Comment.findByPk(1);
-            const comment2 = await Comment.findByPk(2);
-            console.log('comment1 type ', await comment1.getCommentable());
-            console.log('comment2 type ', await comment2.getCommentable());
+            // const comment1 = await Comment.findByPk(1);
+            // const comment2 = await Comment.findByPk(2);
+            // console.log('comment1 type ', await comment1.getCommentable());
+            // console.log('comment2 type ', await comment2.getCommentable());
 
             const comments = await Comment.findAll({
                 include: [Image, Video]
